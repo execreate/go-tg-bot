@@ -1,0 +1,14 @@
+version: '3'
+services:
+  bot:
+    container_name: "tgbot"
+    build:
+      dockerfile: ./Dockerfile
+      context: ./
+    env_file:
+      - .env
+    ports:
+      - 8443:8443
+    volumes:
+      - $SSL_CERT_DIR:/usr/local/bin/certificates/
+    restart: on-failure

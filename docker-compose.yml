@@ -9,6 +9,4 @@ services:
       - .env
     ports:
       - 8443:8443
-    volumes:
-      - $SSL_CERT_DIR:/usr/local/bin/certificates/
-    restart: on-failure
+#    restart: on-failure
